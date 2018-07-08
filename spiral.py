@@ -1,5 +1,6 @@
 #Script to Print the ulam spiral in command line
 import math
+import matplotlib.pyplot as plt
 m = int(input("Please Enter the number :"))
 n = m**2
 #Now We generate Primes upto n using Sieve of Eratosthenes
@@ -40,12 +41,8 @@ def spiral_print(Primes,m):
 			k-=1
 		rcol-=1
 
-	for i in range(m):
-		for j in range(m):
-			if matrix[i][j]==1:
-				print(".",end='')
-			else:
-				print(" ",end='')
-		print()
-
-#spiral_print(nums,m)
+	plt.imshow(matrix)
+	plt.axis('off')
+	plt.savefig('plot.png',bbox_inches='tight',pad_inches=0)
+	#plt.show()
+spiral_print(nums,m)
