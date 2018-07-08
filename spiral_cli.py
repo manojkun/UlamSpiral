@@ -48,4 +48,4 @@ def spiral_print(Primes,m):
 				print(" ",end='')
 		print()
 
-#spiral_print(nums,m)
+spiral_print(nums,m)
